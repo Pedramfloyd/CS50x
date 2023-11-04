@@ -1,0 +1,6 @@
+AVG(energy) = 0.65906
+AVG(danceability) = 0.71646
+AVG(valence) = 0.484443
+This averages shows that the person is most intresting to songs that have the most danceability.
+but it can be less precise.
+i think we have to also count the time of playing in each parts for averaging.
