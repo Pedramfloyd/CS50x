@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table_striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Type</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for trans in trans %}
+            <tr>
+                <td> {{ trans["symbol"].upper() }} </td>
+                <td> {{ trans["type"] }} </td>
+                <td> {{ trans["shares"] }} </td>
+                <td> {{ usd(trans["price"]) }} </td>
+                <td> {{ trans["time"] }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
